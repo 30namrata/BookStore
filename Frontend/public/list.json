@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Story Book",
+        "title": "A thrilling story for kids",
+        "category": "Free",
+        "price": "$0.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 2,
+        "name": "Science Fiction",
+        "title": "A thrilling story for kids",
+        "category": "Free",
+        "price": "$0.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 3,
+        "name": "Comedy Book",
+        "title": "A thrilling story for kids",
+        "category": "Free",
+        "price": "$0.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 4,
+        "name": "Horror Book",
+        "title": "A thrilling story for kids",
+        "category": "Free",
+        "price": "$0.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 5,
+        "name": "Spritual Book",
+        "title": "A spritual book for peace",
+        "category": "Free",
+        "price": "$0.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 6,
+        "name": "Motivational Book",
+        "title": "A spritual book for peace",
+        "category": "Free",
+        "price": "$0.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 7,
+        "name": "Romantic Book",
+        "title": "A romantic book for love",
+        "category": "Paid",
+        "price": "$10.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 8,
+        "name": "Travel Book",
+        "title": "A travel book for peace",
+        "category": "Paid",
+        "price": "$10.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 9,
+        "name": "History Book",
+        "title": "A history book for knowledge",
+        "category": "Paid",
+        "price": "$30.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 10,
+        "name": "Self Help Book",
+        "title": "A self help book for peace",
+        "category": "Paid",
+        "price": "$30.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 11,
+        "name": "Food Book",
+        "title": "A food book for peace",
+        "category": "Paid",
+        "price": "$30.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    },
+    {
+        "id": 12,
+        "name": "Tech Book",
+        "title": "A tech book for knowledge",
+        "category": "Paid",
+        "price": "$30.00",
+        "image": "https://media.istockphoto.com/id/2189375735/photo/vintage-hard-cover-books-stacked-with-an-opened-book-on-top-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=AjJrolasV9p5ilATBkcJhN45qAgsvUz0tSE_qbjjHZc="
+    }
+]
