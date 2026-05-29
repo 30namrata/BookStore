@@ -2,8 +2,8 @@ function Cards({ item, key }) {
     console.log("crads", item)
     return (
         <>
-            <div className="mt-4  my-3 p-3">
-                <div className="card bg-base-100 w-96 shadow-sm ">
+            <div className="mt-4 my-3 p-3">
+                <div className="card w-92 bg-base-100 shadow-sm hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white dark:border ">
                     <figure>
                         <img src={item.image} alt="Shoes" />
                     </figure>

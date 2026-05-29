@@ -23,27 +23,26 @@ function Freebook() {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
-                }
+                    dots: true,
+                },
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
-                }
+                    initialSlide: 2,
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
-
 
 
     return (
@@ -55,14 +54,16 @@ function Freebook() {
                 </div>
 
 
-                <SliderComponent {...settings}>
-                    {
-                        bookList.map((item) => {
-                            return (<Cards item={item} key={item.id} />)
-                        })
-                    }
+                <div>
+                    <SliderComponent {...settings}>
+                        {
+                            bookList.map((item) => {
+                                return (<Cards item={item} key={item.id} />)
+                            })
+                        }
 
-                </SliderComponent>
+                    </SliderComponent>
+                </div>
 
             </div>
 
