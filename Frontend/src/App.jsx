@@ -1,12 +1,17 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import About from './component/About';
 import Contact from './component/Contact';
 import Home from "./component/home/Home";
 import Courses from "./component/Courses/Courses";
 import Signup from "./component/Signup/Signup";
+import { useAuth } from "./context/AuthProvider";
+import { Toaster } from "react-hot-toast";
 import Contacts from "./component/Contact/Contact";
 
 function App() {
+  const [authUser, setAuthUser] = useAuth();
+  console.log(authUser);
+
   return (
     <>
 
@@ -16,8 +21,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses" element={authUser ? <Courses /> : <Navigate to="/signup" />} />
         </Routes>
+        <Toaster />
       </div>
 
 

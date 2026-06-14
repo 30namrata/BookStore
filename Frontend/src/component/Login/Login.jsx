@@ -1,22 +1,48 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-
+import { useAuth } from "../../context/AuthProvider";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 function Login() {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const [authUser, setAuthUser] = useAuth();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const onSubmit = async (data) => {
+        const userInfo = {
+            email: data.email,
+            password: data.password
+        };
+        await axios.post("http://localhost:4001/user/login", userInfo)
+            .then((res) => {
+                console.log(res.data);
+                if (res.data) {
+                    toast.success("Logged in successfully");
+                    document.getElementById("my_modal_3").close();
+                    setTimeout(() => {
+                        localStorage.setItem("User", JSON.stringify(res.data.user));
+                        window.location.reload();
+                    }, 1000);
+                }
+            })
+            .catch((err) => {
+                if (err.response) {
+                    console.log(err);
+                    toast.error("Error: " + err.response.data.message);
+                    setTimeout(() => { }, 3000);
+                }
+            });
+    };
+
     return (
         <>
-            {/* You can open the modal using document.getElementById('ID').showModal() method */}
             <div>
                 <dialog id="my_modal_3" className="modal">
                     <div className="modal-box">
                         <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
-                            {/* if there is a button in form, it will close the modal */}
                             <Link to="/" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => document.getElementById("my_modal_3").close()}>✕</Link>
 
                             <h3 className="font-bold text-lg">Login!</h3>
-                            {/* Email */}
                             <div className="mt-4 space-y-3">
                                 <span>Email</span><br />
                                 <input type="email"
@@ -27,10 +53,9 @@ function Login() {
                                 <br />
                                 {errors.email && <span className="text-sm text-red-500">This field is required</span>}
                             </div>
-                            {/* Password */}
                             <div className="mt-4 space-y-3">
                                 <span>Password</span><br />
-                                <input type="text"
+                                <input type="password"
                                     placeholder="Enter your password"
                                     className="w-80 px-3 py-1 border rounded-md outline-none"
                                     {...register("password", { required: true })}

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Login from "./Login/Login";
-
+import { useAuth } from "../context/AuthProvider";
+import LogOut from "./LogOut";
 
 function Navbar() {
+    const [authUser, setAuthUser] = useAuth();
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
     const element = document.documentElement;
     useEffect(() => {
@@ -59,7 +61,7 @@ function Navbar() {
                                 {
                                     navItem.map((item) => {
                                         return (
-                                            <li><a href={item.path}>{item.name}</a></li>
+                                            <li key={item.path}><a href={item.path}>{item.name}</a></li>
                                         )
                                     })
                                 }
@@ -73,7 +75,7 @@ function Navbar() {
                                 {
                                     navItem.map((item) => {
                                         return (
-                                            <li><a href={item.path}>{item.name}</a></li>
+                                            <li key={item.path}><a href={item.path}>{item.name}</a></li>
                                         )
                                     })
                                 }
@@ -124,10 +126,16 @@ function Navbar() {
                             </svg>
                         </label>
 
-                        <div className="">
-                            <a className="bg-black text-white px-3 py-2 rounded-md cursor-pointer hover:bg-gray-800 duration-300" onClick={() => document.getElementById("my_modal_3").showModal()}>Login</a>
-                        </div>
-                        <Login />
+                        {
+                            authUser ? (
+                                <LogOut />
+                            ) : (
+                                <div className="">
+                                    <a className="bg-black text-white px-3 py-2 rounded-md cursor-pointer hover:bg-gray-800 duration-300" onClick={() => document.getElementById("my_modal_3").showModal()}>Login</a>
+                                    <Login />
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>
