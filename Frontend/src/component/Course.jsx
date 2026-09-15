@@ -9,8 +9,8 @@ function Course() {
         const getBook = async () => {
             try {
                 const res = await axios.get("http://localhost:4001/book");
-                console.log(res.data);
-                setBook(res.data);
+                const paidBook = res.data.filter(data => data.category === "Paid");
+                setBook(paidBook);
             } catch (error) {
                 console.log(error);
             }

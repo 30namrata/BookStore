@@ -15,11 +15,11 @@ const LogOut = () => {
             localStorage.removeItem("User");
             setTimeout(() => {
                 window.location.reload();
-            }, 2000)
+            }, 1000)
         } catch (error) {
             setTimeout(() => {
                 toast.error(error.message);
-            }, 3000)
+            }, 1000)
         }
 
     }

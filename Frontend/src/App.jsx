@@ -1,12 +1,12 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import About from './component/About';
-import Contact from './component/Contact';
 import Home from "./component/home/Home";
 import Courses from "./component/Courses/Courses";
 import Signup from "./component/Signup/Signup";
 import { useAuth } from "./context/AuthProvider";
 import { Toaster } from "react-hot-toast";
 import Contacts from "./component/Contact/Contact";
+import About from "./component/About/About";
+
 
 function App() {
   const [authUser, setAuthUser] = useAuth();

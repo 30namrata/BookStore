@@ -1,13 +1,19 @@
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 function Contact() {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    
+    const onSubmit = (data) => {
+        console.log(data);
+        toast.success("Message sent successfully!");
+        reset();
+    };
 
     return (
         <>
             <div className="flex h-screen items-center justify-center">
-                <div className="w-[500px">
+                <div className="w-[500px]">
                     <div className="bg-base-100 p-8 rounded-xl shadow-md relative">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <h2 className="text-xl">Contact US</h2>

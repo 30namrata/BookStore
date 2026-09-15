@@ -1,4 +1,4 @@
-
+import image from "../assets/Banner.png"
 function Banner() {
     return (
         <>
@@ -31,7 +31,7 @@ function Banner() {
                 </div>
                 <div className="order-1 w-full md:w-1/2">
                     <img
-                        src="/Banner.png"
+                        src={image}
                         className="md:w-[600px] md:h-[460px] md:ml-12"
                         alt=""
                     />
