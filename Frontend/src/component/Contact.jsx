@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 function Contact() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    
+
     const onSubmit = (data) => {
         console.log(data);
         toast.success("Message sent successfully!");
@@ -37,7 +37,7 @@ function Contact() {
                                 <br />
                                 <input
                                     type="text"
-                                    placeholder="Enter you email"
+                                    placeholder="Enter your email"
                                     className="w-80 px-3 py-1 border rounded-md outline-none"
                                     {...register("email", { required: true })}
 

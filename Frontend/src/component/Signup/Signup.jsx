@@ -22,7 +22,7 @@ function Signup() {
             .then((res) => {
                 console.log(res.data);
                 if (res.data) {
-                    toast.success("Signup Successfully");
+                    toast.success("Signed up successfully");
                     navigate(from, { replace: true });
                 }
                 localStorage.setItem("User", JSON.stringify(res.data.user));
@@ -55,7 +55,7 @@ function Signup() {
                                 <br />
                                 <input
                                     type="text"
-                                    placeholder="Enter your fullname"
+                                    placeholder="Enter your full name"
                                     className="w-80 px-3 py-1 border rounded-md outline-none"
                                     {...register("fullname", { required: true })}
                                 />
@@ -91,7 +91,7 @@ function Signup() {
                                     Signup
                                 </button>
                                 <div className="text-xl">
-                                    Have account?{" "}
+                                    Have an account?{" "}
                                     <button
                                         type="button"
                                         className="underline text-blue-500 cursor-pointer"
@@ -102,9 +102,9 @@ function Signup() {
                                         Login
                                     </button>
                                 </div>
-                                <Login />
                             </div>
                         </form>
+                        <Login />
                     </div>
                 </div>
             </div>

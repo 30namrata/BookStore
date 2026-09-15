@@ -9,7 +9,7 @@ function About() {
             <div className="min-h-screen">
                 <AboutContent />
             </div>
-            <Footer />
+
         </>
     )
 }
