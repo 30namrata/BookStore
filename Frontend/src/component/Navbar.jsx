@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Login from "./Login/Login";
+import Login from "./login/Login";
 import { useAuth } from "../context/AuthProvider";
 import LogOut from "./LogOut";
 
