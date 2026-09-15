@@ -16,13 +16,14 @@ const port = process.env.PORT || 4000;
 const URI = process.env.MongoDbURL
 
 //connect mongo db
-try {
-    mongoose.connect(URI);
-    console.log("Connected to MongoDB");
-}
-catch (error) {
-    console.log(error);
-}
+mongoose
+    .connect(process.env.MongoDbURL)
+    .then(() => {
+        console.log("Connected to MongoDB");
+    })
+    .catch((err) => {
+        console.error("MongoDB Error:", err);
+    });
 //create route
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
