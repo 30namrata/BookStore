@@ -5,12 +5,13 @@ import Slider from "react-slick";
 import Cards from "./Cards";
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 function Freebook() {
     const [book, setBook] = useState([]);
     useEffect(() => {
         const getBook = async () => {
             try {
-                const res = await axios.get("https://backend-bookstore-runa.onrender.com/book");
+                const res = await axios.get(`${API_BASE_URL}/book`);
                 const data = res.data.filter((data) => data.category === "Free");
                 setBook(data);
             } catch (error) {

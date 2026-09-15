@@ -5,6 +5,9 @@ import { useAuth } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+
 function Signup() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -18,7 +21,7 @@ function Signup() {
             email: data.email,
             password: data.password
         };
-        await axios.post("https://backend-bookstore-runa.onrender.com/user/signup", userInfo)
+        await axios.post(`${API_BASE_URL}/user/signup`, userInfo)
             .then((res) => {
                 if (res.data) {
                     toast.success("Signed up successfully");

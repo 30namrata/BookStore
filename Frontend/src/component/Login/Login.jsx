@@ -4,6 +4,8 @@ import { useAuth } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 function Login() {
     const [authUser, setAuthUser] = useAuth();
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -13,7 +15,7 @@ function Login() {
             email: data.email,
             password: data.password
         };
-        await axios.post("https://backend-bookstore-runa.onrender.com/user/login", userInfo)
+        await axios.post(`${API_BASE_URL}/user/login`, userInfo)
             .then((res) => {
                 if (res.data) {
                     toast.success("Logged in successfully");
