@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Login from "../login/Login";
+import Login from "../Login/Login";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthProvider";
 import toast from "react-hot-toast";

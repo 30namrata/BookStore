@@ -1,10 +1,10 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./component/home/Home";
-import Courses from "./component/courses/Courses";
-import Signup from "./component/signup/Signup";
+import Courses from "./component/Courses/Courses";
+import Signup from "./component/Signup/Signup";
 import { useAuth } from "./context/AuthProvider";
 import { Toaster } from "react-hot-toast";
-import Contacts from "./component/contact/Contact";
+import Contacts from "./component/Contact/Contact";
 import About from "./component/About/About";
 
 
