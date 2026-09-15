@@ -20,7 +20,6 @@ function Signup() {
         };
         await axios.post("https://backend-bookstore-runa.onrender.com/user/signup", userInfo)
             .then((res) => {
-                console.log(res.data);
                 if (res.data) {
                     toast.success("Signed up successfully");
                     navigate(from, { replace: true });

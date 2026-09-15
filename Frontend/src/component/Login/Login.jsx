@@ -15,7 +15,6 @@ function Login() {
         };
         await axios.post("https://backend-bookstore-runa.onrender.com/user/login", userInfo)
             .then((res) => {
-                console.log(res.data);
                 if (res.data) {
                     toast.success("Logged in successfully");
                     document.getElementById("my_modal_3").close();

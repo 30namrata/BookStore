@@ -20,7 +20,6 @@ function Navbar() {
             document.body.classList.remove("dark");
         }
     }, [theme]);
-    console.log("theme", theme);
 
     const [sticky, setSticky] = useState(false);
     useEffect(() => {

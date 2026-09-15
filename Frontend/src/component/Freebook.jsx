@@ -11,9 +11,7 @@ function Freebook() {
         const getBook = async () => {
             try {
                 const res = await axios.get("https://backend-bookstore-runa.onrender.com/book");
-                console.log("book", res.data)
                 const data = res.data.filter((data) => data.category === "Free");
-                console.log(data);
                 setBook(data);
             } catch (error) {
                 console.log(error);

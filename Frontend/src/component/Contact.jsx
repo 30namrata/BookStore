@@ -5,7 +5,6 @@ function Contact() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
         toast.success("Message sent successfully!");
         reset();
     };

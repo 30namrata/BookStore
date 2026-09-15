@@ -10,7 +10,6 @@ import About from "./component/About/About";
 
 function App() {
   const [authUser, setAuthUser] = useAuth();
-  console.log(authUser);
 
   return (
     <>
