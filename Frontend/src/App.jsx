@@ -1,6 +1,6 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./component/home/Home";
-import Courses from "./component/Courses/Courses";
+import Courses from "./component/courses/Courses";
 import Signup from "./component/Signup/Signup";
 import { useAuth } from "./context/AuthProvider";
 import { Toaster } from "react-hot-toast";
